@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import AppCard from './components/AppCard'
+import AppCard from './components/jsx/AppCard'
 import './global.css';
 
 function App() {
