@@ -1,19 +1,16 @@
-import { IconX } from "@tabler/icons-react";
 import '../css/browser-window.css'
-import { useState } from "react";
+import CloseButton from './CloseButton';
 
-function BrowserWindow({ fullscreen, setFullscreen }) {
-    const {shouldClose, setShouldClose} = useState(false);
-
-    function handleClose() {
-        setFullscreen(false)
-        setShouldClose(true)
-    }
-
+function BrowserWindow({ setFullscreen, name }) {
     return (
-        <div className={`background ${fullscreen && shouldClose ? 'backgroundFadeOut' : ''}`}>
+        <div className={`background backgroundFadeIn`}>
             <div className="container">
-                <IconX className={"closeButton clickable"} stroke={2} onClick={handleClose} />
+                <div className='closeButtonWrapper'>
+                    <CloseButton setFullscreen={setFullscreen} />
+                </div>
+                <div className='innerContainer'>
+                    <p className='glowingText'>{name}</p>
+                </div>
             </div>
         </div>
     )

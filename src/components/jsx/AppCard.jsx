@@ -1,3 +1,4 @@
+import '../css/app-card.css'
 import { useState } from "react";
 import BrowserWindow from "./BrowserWindow";
 
@@ -6,13 +7,12 @@ function AppCard({ name }) {
 
     return (
         <div>
-            {fullscreen ?
-                <BrowserWindow fullscreen={fullscreen} setFullscreen={setFullscreen} />
-                :
-                <div className="clickable" onClick={() => setFullscreen(true)}>
-                    <p>{name}</p>
-                </div>
+            {fullscreen &&
+                <BrowserWindow fullscreen={fullscreen} setFullscreen={setFullscreen} name={name} />
             }
+            <div className="clickable" onClick={() => setFullscreen(true)}>
+                <p>{name}</p>
+            </div>
         </div>
     )
 }

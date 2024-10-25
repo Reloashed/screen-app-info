@@ -1,4 +1,14 @@
+.closeButtonWrapper {
+    width: 100%;
+
+    display: flex;
+    justify-content: flex-end;
+}
+
 .closeButton {
     color: white;
     justify-self: end;
+
+    margin-top: 0.2rem;
+    margin-right: 0.2rem;
 }
